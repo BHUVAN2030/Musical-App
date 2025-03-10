@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title Text -->
+
+    <!-- Song Title -->
+
+    <!-- Album Art -->
+    <TextView
+        android:id="@+id/songCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Category: Melody"
+        android:textColor="#FF6200EE"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:radius="28dp"
+        android:elevation="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Music Control Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/prev"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Previous song" />
+
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/play"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Play or Pause music" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/next"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Next song" />
+    </LinearLayout>
+
+    <!-- SeekBar -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0" />
+</LinearLayout>
